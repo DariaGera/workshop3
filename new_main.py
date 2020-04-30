@@ -208,7 +208,7 @@ print()
 # Visualization of query 2st---------------------------------------------------------------------
 labels = towns
 values = percentage
-pie = go.Pie(labels = labels, values = values, pull =[0, 0, 0.15, 0])
+pie = go.Pie(labels = labels, values = values)
 query_2 = py.plot([pie], filename='percentage')
 
 
