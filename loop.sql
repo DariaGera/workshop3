@@ -21,7 +21,21 @@ END;
 /
 
 
+--не--завдання,--але--рекурсія-----
+with numbers(velue, n_mber) as
+(
+--select 1 as value from dual
 
+select  1 as velue, (select 1 as velue from dual)*2 as n_mber from dual
+union all
+
+--select value+1 as value from numbers
+select velue+1 as velue, (select (velue+1) from dual)*2 as n_mber from numbers
+--where value<5
+where velue <7 
+)
+--select value from numbers;
+select * from numbers;
 
 
 
