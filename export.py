@@ -38,5 +38,5 @@ for [town] in cursor:
         for address, timestamp, title in cursor_values:
             writer.writerow([address, timestamp, title])
 
-
+cursor_values.close()
 cursor.close()
