@@ -41,7 +41,7 @@ for table in tables:
 
 
 i = 1
-UniqueTown = unique_values(towns)[:15]  # лише 15 міст зі штату
+UniqueTown = unique_values(towns)[:15]  # лише 15 міст зі штату, бо дуже багато даних, kill me please
 UniqueTown_1 = []
 UniqueTwpAddr = []
 UniqueIdTime = []
@@ -69,9 +69,10 @@ for row in all_lines:
             query = '''insert into accident(timestamp, title, place_place_id) 
             values(TO_TIMESTAMP(:timestamp,'yyyy-mm-dd HH24:MI:SS'), :title, :id)'''
             cursor.execute(query, timestamp=timestamp, title=title, id=help_dict[town, address])
-            print('inserted3')
         i += 1
 
 connection.commit()
 cursor.close()
 connection.close()
+
+
