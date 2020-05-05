@@ -1,3 +1,21 @@
+create table placce(
+    place_id INTEGER NOT NULL,
+    twp VARCHAR2(128) NOT NULL,
+    addr VARCHAR2(128) NOT NULL
+);
+
+insert into placce(place_id, twp, addr) values (1, "first", "first");
+insert into placce(place_id, twp, addr) values (2, "first", "second");
+insert into placce(place_id, twp, addr) values (3, "first", "third");
+insert into placce(place_id, twp, addr) values (4, "second", "first");
+insert into placce(place_id, twp, addr) values (5, "third", "first");
+insert into placce(place_id, twp, addr) values (6, "third", "second");
+insert into placce(place_id, twp, addr) values (7, "third", "third");
+insert into placce(place_id, twp, addr) values (8, "third", "forth");
+
+
+
+-----------creating test view---------------------------
 CREATE OR REPLACE VIEW full_accident_table AS
     SELECT
         placce.twp,
