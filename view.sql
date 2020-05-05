@@ -13,7 +13,15 @@ insert into placce(place_id, twp, addr) values (6, "third", "second");
 insert into placce(place_id, twp, addr) values (7, "third", "third");
 insert into placce(place_id, twp, addr) values (8, "third", "forth");
 
-
+create table accidento(
+    timestamp TIMESTAMP NOT NULL,
+    title VARCHAR2(128) NOT NULL,
+    place_id INTEGER NOT NULL
+);
+insert into accidento(timestamp, title, place_id) values (to_timestamp('12-AUG-18 10.07.39.000000000 PM','DD-MON-RR HH.MI.SSXFF AM'),'EMS: RESPIRATORY EMERGENCY', 1);
+insert into accidento(timestamp, title, place_id) values (to_timestamp('17-OCT-18 06.26.46.000000000 PM','DD-MON-RR HH.MI.SSXFF AM'),'Fire: FIRE ALARM', 2);
+insert into accidento(timestamp, title, place_id) values (to_timestamp('30-JUL-19 04.04.18.000000000 PM','DD-MON-RR HH.MI.SSXFF AM'),'Traffic: VEHICLE ACCIDENT -', 2);
+insert into accidento(timestamp, title, place_id) values (to_timestamp('24-NOV-19 09.11.32.000000000 AM','DD-MON-RR HH.MI.SSXFF AM'),'Traffic: VEHICLE ACCIDENT -', 6);
 
 -----------creating test view---------------------------
 CREATE OR REPLACE VIEW full_accident_table AS
