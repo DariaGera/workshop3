@@ -4,14 +4,14 @@ create table placce(
     addr VARCHAR2(128) NOT NULL
 );
 
-insert into placce(place_id, twp, addr) values (1, "first", "first");
-insert into placce(place_id, twp, addr) values (2, "first", "second");
-insert into placce(place_id, twp, addr) values (3, "first", "third");
-insert into placce(place_id, twp, addr) values (4, "second", "first");
-insert into placce(place_id, twp, addr) values (5, "third", "first");
-insert into placce(place_id, twp, addr) values (6, "third", "second");
-insert into placce(place_id, twp, addr) values (7, "third", "third");
-insert into placce(place_id, twp, addr) values (8, "third", "forth");
+insert into placce(place_id, twp, addr) values (1, 'first', 'first');
+insert into placce(place_id, twp, addr) values (2, 'first', 'second');
+insert into placce(place_id, twp, addr) values (3, 'first', 'third');
+insert into placce(place_id, twp, addr) values (4, 'second', 'first');
+insert into placce(place_id, twp, addr) values (5, 'third', 'first');
+insert into placce(place_id, twp, addr) values (6, 'third', 'second');
+insert into placce(place_id, twp, addr) values (7, 'third', 'third');
+insert into placce(place_id, twp, addr) values (8, 'third', 'forth');
 
 create table accidento(
     timestamp TIMESTAMP NOT NULL,
