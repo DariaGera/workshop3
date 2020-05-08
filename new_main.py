@@ -226,7 +226,8 @@ WHERE twp=: town
 GROUP BY EXTRACT(YEAR FROM full_accident_table.timestamp), twp
 ORDER BY EXTRACT(YEAR FROM full_accident_table.timestamp)
 """
-cursor.execute(query, town='WHITPAIN')
+# cursor.execute(query, town='WHITPAIN')
+cursor.execute(query, town='first')
 print('Запит 1')
 print('|Town           |year|Amount of accidents|')
 print('-'*41)
